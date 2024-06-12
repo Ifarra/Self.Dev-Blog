@@ -1,0 +1,660 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0ed3cf" />
+
+    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Self.Dev : Article</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="asset/ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="asset/ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="asset/ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="asset/ico/site.webmanifest" />
+
+    <link
+      rel="canonical"
+      href="https://tailwindcomponents.com/component/navbar-hamburger-menu"
+      itemprop="URL"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+
+  <body class="bg-gray-100">
+    <nav
+      class="relative px-4 py-4 flex justify-between items-center bg-white sticky top-0 z-50 shadow-lg"
+    >
+      <a class="text-3xl font-bold leading-none" href="#">
+        <img src="asset/img/selfdev2.png" width="100" />
+      </a>
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-blue-600 p-3">
+          <svg
+            class="block h-4 w-4 fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+      <ul
+        class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6"
+      >
+        <li>
+          <a class="text-sm text-gray-400 hover:text-gray-500" href="index.html"
+            >Home</a
+          >
+        </li>
+        <li class="text-gray-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            ></path>
+          </svg>
+        </li>
+        <li>
+          <a class="text-sm text-gray-400 hover:text-gray-500" href="about.html"
+            >About Us</a
+          >
+        </li>
+        <li class="text-gray-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            class="w-4 h-4 current-fill"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+            ></path>
+          </svg>
+        </li>
+        <li><a class="text-sm text-blue-600 font-bold" href="#">Article</a></li>
+      </ul>
+      <a
+        class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
+        href="#"
+        >Sign In</a
+      >
+      <a
+        class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+        href="#"
+        >Sign up</a
+      >
+    </nav>
+    <div class="navbar-menu relative z-50 hidden">
+      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+      <nav
+        class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+      >
+        <div class="flex items-center mb-8">
+          <a
+            class="mr-auto text-3xl font-bold leading-none flex flex-row-reverse items-center justify-center"
+            href="#"
+          >
+            <svg class="h-12" alt="logo" viewBox="0 0 10240 10240">
+              <img src="asset/img/selfdev2.png" width="100" alt="" />
+            </svg>
+          </a>
+          <button class="navbar-close">
+            <svg
+              class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <ul>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="about.html"
+                >About Us</a
+              >
+            </li>
+            <li class="mb-1">
+              <a
+                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                href="#"
+                >Article</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mt-auto">
+          <div class="pt-6">
+            <a
+              class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+              href="#"
+              >Sign in</a
+            >
+            <a
+              class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-xl"
+              href="#"
+              >Sign Up</a
+            >
+          </div>
+          <p class="my-4 text-xs text-center text-gray-400">
+            <span>Copyright © 2024</span>
+          </p>
+        </div>
+      </nav>
+    </div>
+
+    <!-- MUALI ISI ARICLE PAGE DI SINI -->
+
+    <!-- <div class="container mx-auto px-6 py-16 text-center">
+    <div class="w-full max-w-full mb-8 px-4 flex flex-row text-left min-w-full ">
+          <div class="flex flex-row justify-between  bg-white rounded-xl min-w-full">
+            <img src="asset/img/placeholder.jpg" alt="Card img" class="object-cover object-center w-50 h-48 rounded-lg m-5">
+            <div class="flex flex-col my-8">
+                <div>
+                    <a href="#" class="block mb-4 text-2xl font-black leading-tight hover:underline hover:text-blue-600">
+                    Old School Art
+                    </a>
+                    <p class="mb-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, earum quae? Dolor fugit quos adipisci quaerat nihil, autem ab nemo, commodi veniam beatae provident quas ullam perspiciatis corporis doloremque perferendis, officia eos unde consequuntur facilis pariatur ipsa magnam eius. Commodi, possimus voluptas. Autem odio beatae veritatis dignissimos aut, eos laborum.
+                    </p>
+                </div>
+            </div>              
+        </div>
+        
+      </div>
+</div> -->
+    <article
+      class="container mx-auto text-center bg-white rounded-xl p-2 my-4 shadow-lg md:px-20 md:my-10"
+    >
+      <h1 class="md:text-4xl text-2xl font-bold">Personal Development</h1>
+      <p class="md:text-1xl text-sm inline-block mx-1 my-5">Written by</p>
+      <p class="md:text-base text-sm inline-block text-blue-600">Rico</p>
+      <div class="flex-row flex justify-center">
+        <img
+          src="https://th.bing.com/th/id/OIP.FKEffW_uoJInZaf3-hfJmAHaEj?w=297&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          alt="Card img"
+          class="object-cover object-center w-1/2"
+        />
+      </div>
+      <div class="md:mx-10 mx-5 my-10 text-justify">
+        <p>
+          Personal development is a lifelong process. It is a means for
+          individuals to evaluate their abilities and attributes, reflect on
+          their life goals, and establish objectives in order to reach and
+          surpass their full potential.
+        </p>
+        <p class="mt-3">
+          This website assists you in determining the competencies required to
+          create life objectives that will improve your chances of finding
+          employment, boost your self-esteem, and result in a better, more
+          satisfying life. create plans to create future life decisions that are
+          pertinent, constructive, and successful in order to facilitate
+          personal empowerment.
+        </p>
+        <p class="mt-3">
+          Personal growth shouldn't end later in life, even while early life
+          development and early formative experiences at home, at school, and
+          other places might serve to shape us as adults. Today, we will provide
+          you with knowledge and advice to assist you consider your personal
+          growth and approaches to achieve your goals and reach your full
+          potential.
+        </p>
+
+        <h3 class="text-lg font-bold mt-5">5 areas of personal development</h3>
+        <p class="mt-3">
+          Regarding individual growth, it's difficult to overlook Maslow's
+          hierarchy of needs. Maslow argues that in order to realize your full
+          potential, your basic needs must be met. Stated differently. Achieving
+          the pinnacles of self-awareness, self-confidence, personal
+          development, and self-realization is what it means to be
+          self-actualized.
+        </p>
+        <p class="mt-3">
+          There are five distinct categories of personal growth, which are
+          similar to Maslow's hierarchy of needs. Different categories may apply
+          to different personal development objectives.
+        </p>
+        <ol class="mt-5 list-decimal font-semibold">
+          <li class="mx-10 mb-2 text-base">Mental</li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              Exercising your brain and remaining intellectually fit is
+              essential for personal development. Including career development,
+              learning opportunities, and coaching. For instance, I'm taking a
+              creative writing course at the moment to help maintain the
+              strength of my creative mind.
+            </p>
+            <p class="mt-3">
+              Anything from training sessions to workshops to simply resting can
+              promote mental development. Sleep is as crucial as mental
+              exercise, if not more so. Furthermore, resilience, inventiveness,
+              and self-awareness all increase with increased mental fitness.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">Social</li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              Social connections and relationships are also a must-have for any
+              personal development. Ultimately, enhancing oneself is not an
+              isolated endeavor. Since humans are social beings, we require
+              interaction in order to develop and learn.
+            </p>
+            <p class="mt-3">
+              Additionally, social relationships help us acquire valuable
+              talents. such as effective communication, problem-solving,
+              fostering relationships, and the capacity for both giving and
+              receiving feedback. We also pick up knowledge from those around us
+              and their experiences.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">Spiritual</li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              Personal growth and development, whether religious or not, can
+              manifest themselves through spiritual practice. It's critical to
+              understand that religion and spirituality are two different
+              things. Far from it, in actuality.
+            </p>
+            <p class="mt-3">
+              Investing in a deeper understanding of who you are in the world
+              around you is what it means to be spiritual. It aids in
+              self-discovery and the identification of your ideals. And, in the
+              context of Inner Work, the spiritual personal development tool can
+              increase self-awareness and promote change.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">Emotional</li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              Emotional intelligence and emotional personal development
+              frequently go hand in hand. Emotional intelligence is simply the
+              capacity to comprehend emotions. It goes beyond just having
+              sentiments to comprehend how those sensations influence our
+              decisions and behaviors.
+            </p>
+            <p class="mt-3">
+              A wide range of events might contribute to one's emotional growth.
+              And you can benefit from those experiences in your quest for
+              personal development. So far, embark on your own Inner Work
+              journey. What life events have influenced who you are now? What
+              have you discovered when you take stock of your journey?
+            </p>
+            <p class="mt-3">
+              It's possible that you encouraged emotional growth along the road
+              if you're reflecting on your journey and seeing the improvements.
+              To comprehend the part your ideas and feelings played in this, you
+              must possess emotional intelligence.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">Physical</li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              A healthy body fuels a healthy mind. Your mental, emotional, and
+              physical health are inextricably linked. This facet of
+              self-improvement centers on maintaining physical well-being,
+              including proper diet, rest, exercise, and mobility. It's possible
+              that while you take care of your physical needs, your mind is also
+              benefiting. Think about how you might further this area of your
+              own growth and pay attention to your physical and mental
+              well-being.
+            </p>
+          </div>
+        </ol>
+        <h3 class="text-lg font-bold mt-5">
+          The Benefits of Personal Development
+        </h3>
+        <p class="mt-3">
+          The advantages of personal development are numerous. Although the
+          process of personal growth is difficult, the rewards will make it
+          worthwhile.
+        </p>
+        <ol class="mt-5 list-decimal font-semibold">
+          <li class="mx-10 mb-2 text-base">
+            Increased self-awareness and self-esteem
+          </li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              It's necessary for personal development to examine your own ideas,
+              emotions, routines, and responses. It necessitates paying
+              attention to and being aware of your current state as a person.
+              However, it also forces you to consider your goals for the future.
+              Investing in oneself raises your level of self-awareness and,
+              consequently, self-esteem.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">Increased mental fitness</li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              Gaining mental fitness takes effort. Strong mental fitness can
+              also be developed through a variety of personal development
+              activities. Gaining more mental fitness will have beneficial
+              effects that cascade in. Data regarding the significance of mental
+              fitness have been acquired. Strong mental fitness is associated
+              with increased productivity, a lower risk of mental disease, and
+              greater creativity and innovation.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">Greater resilience</li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              You become more resilient as you grow personally. This is just
+              another indication that mental fitness is robust. Putting money
+              into your personal development also involves putting money into
+              your capacity to recover from setbacks.
+            </p>
+            <p class="mt-3">
+              Greater understanding and acquired abilities. Personal development
+              frequently entails gaining new information and abilities. This
+              could materialize in a variety of ways. For instance, you can
+              enroll in digital marketing classes to acquire the knowledge and
+              abilities required to advance your professional development.
+              Alternatively, you may enroll in pottery or art lessons, which can
+              help you learn skills in completely different spheres of your
+              life.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">
+            Improved personal and professional relationships
+          </li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              Enhanced interpersonal and career connections are an additional
+              advantage of personal growth. When you make an investment in your
+              own development, particularly in the emotional and social spheres,
+              this area thrives.
+            </p>
+          </div>
+        </ol>
+        <h3 class="text-lg font-bold mt-5">
+          Steps to Developing a Personal Development Plan
+        </h3>
+        <p class="mt-3">
+          Just like with any other objective, planning is essential. You're more
+          likely to succeed if you put some structure into the creation of your
+          personal development strategy.
+        </p>
+        <ol class="mt-5 list-decimal font-semibold">
+          <li class="mx-10 mb-2 text-base">
+            Identify areas where you’d like to improve
+          </li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              You will probably need to do some Inner Work® for this first
+              phase. Give yourself a moment to consider your current situation.
+              Which qualities do you possess? Which areas do you wish to
+              concentrate on? What personal development and progress do you hope
+              to see in yourself?
+            </p>
+            <p class="mt-3">
+              This can be a helpful tool if you have completed the Whole Person
+              Assessment. After you've given your personal goals some thought,
+              decide which areas you'd like to strengthen.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">
+            Work with a coach or mentor to assemble a plan
+          </li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              You don't have to accomplish it alone, even if it's a personal
+              growth plan. To assist in formulating a plan, rely on support
+              networks such as mentors or life coaches. You'll be more capable
+              of carrying out the strategy if you have the proper framework in
+              place and receive feedback as you go.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">Structure your personal development goals</li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              Maintain a schedule and increase your consistency. Take a look at
+              your daily routine and look for opportunities to either create new
+              habits or reinforce current ones.
+            </p>
+            <p class="mt-3">
+              I wanted to incorporate strength training into my fitness regimen
+              in the past year. The worst part? I don't ever work with weights.
+              I made the decision to position a weighted yoga mat next to my
+              running shoes. I can't help but think about those weights next to
+              my sneakers every time I go for a run. Reminding myself to work
+              out for only five minutes with some dumbbells is helpful.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">Find an accountability buddy</li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              Having someone hold you responsible for your actions might make
+              all the difference sometimes. If you and a friend are both making
+              plans and goals, think about how you may help each other.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">Be honest and aware of your progress</li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              Integrity is a must for your personal growth plan. Be sincere with
+              yourself about your development and advancement. It also calls for
+              a certain amount of self-awareness. You can also ask friends,
+              family, and coworkers for their opinions to get a sense of how
+              you're doing in terms of achieving your objectives.
+            </p>
+          </div>
+          <li class="mx-10 mb-2">
+            Factor personal development into your mental fitness plan
+          </li>
+          <div class="mx-10 mb-5 font-normal text-sm">
+            <p class="mb-2">
+              What role does personal growth play in your strategy for mental
+              health? Think about how you and your coach can integrate personal
+              development elements into your overall mental health. 
+            </p>
+          </div>
+        </ol>
+      </div>
+    </article>
+
+    <!-- Comment Sectiont -->
+    <div class="bg-gray-100 p-6">
+      <h2 class="text-lg font-bold mb-4">Comments</h2>
+
+      <!-- Sample Comment Below -->
+
+      <div class="flex flex-col space-y-4">
+        <!-- <div class="bg-white p-4 rounded-lg shadow-md">
+            <h3 class="text-lg font-bold">John Doe</h3>
+            <p class="text-gray-700 text-sm mb-2">Posted on April 17, 2023</p>
+            <p class="text-gray-700">This is a sample comment. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h3 class="text-lg font-bold">Jane Smith</h3>
+            <p class="text-gray-700 text-sm mb-2">Posted on April 16, 2023</p>
+            <p class="text-gray-700">I agree with John. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div> -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+          <h3 class="text-lg font-bold">Bob Johnson</h3>
+          <p class="text-gray-700 text-sm mb-2">Posted on April 15, 2023</p>
+          <p class="text-gray-700">
+            I have a different opinion. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+        </div>
+        <form class="bg-white p-4 rounded-lg shadow-md">
+          <h3 class="text-lg font-bold mb-2">Add a comment</h3>
+
+          <!-- name input in comment section -->
+
+          <!-- <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="name">
+                    Name
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="name" type="text" placeholder="Enter your name">
+            </div> -->
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="comment">
+              Comment
+            </label>
+            <textarea
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="comment"
+              rows="3"
+              placeholder="Enter your comment"
+            ></textarea>
+          </div>
+          <button
+            class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Foooter -->
+    <section class="bg-white">
+      <div
+        class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8"
+      >
+        <nav class="flex flex-wrap justify-center -mx-5 -my-2">
+          <div class="px-5 py-2">
+            <a
+              href="index.html"
+              class="text-base leading-6 text-gray-500 hover:text-blue-900"
+            >
+              Home
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="about.html"
+              class="text-base leading-6 text-gray-500 hover:text-blue-900"
+            >
+              About us
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a
+              href="#"
+              class="text-base leading-6 text-gray-500 hover:text-blue-900"
+            >
+              Article
+            </a>
+          </div>
+        </nav>
+        <div class="flex justify-center mt-8 space-x-6">
+          <a href="#" class="text-gray-400 hover:text-gray-500">
+            <span class="sr-only">Github</span>
+            <img src="asset/img/selfdev2.png" width="100" alt="" />
+          </a>
+        </div>
+        <p class="mt-8 text-base leading-6 text-center text-gray-400">
+          © 2024 Self.dev. All rights reserved.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      // Burger menus
+      document.addEventListener("DOMContentLoaded", function () {
+        // open
+        const burger = document.querySelectorAll(".navbar-burger");
+        const menu = document.querySelectorAll(".navbar-menu");
+
+        if (burger.length && menu.length) {
+          for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        // close
+        const close = document.querySelectorAll(".navbar-close");
+        const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+        if (close.length) {
+          for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        if (backdrop.length) {
+          for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

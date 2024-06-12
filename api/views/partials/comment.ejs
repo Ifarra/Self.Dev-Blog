@@ -1,0 +1,62 @@
+<div class="flex flex-col space-y-4">
+    <div id="commentsContainer" class="flex flex-col space-y-4">
+
+    </div>
+    <form action="/blog/<%= fid %>/comment" method="post" class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="text-lg font-bold mb-2">Add a comment</h3>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="comment">
+                Comment
+            </label>
+            <textarea
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="comment" name="comment" rows="3" placeholder="Enter your comment"></textarea>
+        </div>
+        <button
+            class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit">
+            Submit
+        </button>
+    </form>
+</div>
+<script>
+    // Sample JSON data
+    fetch('/blog/<%= fid %>/comments')
+        .then(response => response.json())
+        .then(jsonData => {
+            // Get the commentsContainer element
+            const commentsContainer = document.getElementById('commentsContainer');
+
+            // Loop through the comments array
+            jsonData.forEach(item => {
+                item.comments.forEach(commentItem => {
+                    // Create the comment element
+                    const commentDiv = document.createElement('div');
+                    commentDiv.classList.add('bg-white', 'p-4', 'rounded-lg', 'shadow-md');
+
+                    const title = document.createElement('h3');
+                    title.classList.add('text-lg', 'font-bold');
+                    title.textContent = commentItem.user.username;
+
+                    const date = document.createElement('p');
+                    date.classList.add('text-gray-700', 'text-sm', 'mb-2');
+                    date.textContent = 'commented on ' + new Date(commentItem.user.iat * 1000).toLocaleString();
+
+                    const content = document.createElement('p');
+                    content.classList.add('text-gray-700');
+                    content.textContent = commentItem.comment;
+
+                    commentDiv.appendChild(title);
+                    commentDiv.appendChild(date);
+                    commentDiv.appendChild(content);
+
+                    // Append the comment to the container
+                    commentsContainer.prepend(commentDiv);
+                });
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching comments:', error);
+            // Display an error message to the user
+        });
+</script>

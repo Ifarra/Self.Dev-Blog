@@ -1,0 +1,321 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0ed3cf">
+
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Self.Dev : About us</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="asset/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="asset/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="asset/ico/favicon-16x16.png">
+    <link rel="manifest" href="asset/ico/site.webmanifest">
+
+    <link rel="canonical" href="https://tailwindcomponents.com/component/navbar-hamburger-menu" itemprop="URL">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body class="bg-gray-100">
+    <nav class="relative px-4 py-4 flex justify-between items-center bg-white sticky top-0 z-50 shadow-lg">
+        <a class="text-3xl font-bold leading-none" href="#">
+            <img src="asset/img/selfdev2.png" width="100"></img>
+        </a>
+        <div class="lg:hidden">
+            <button class="navbar-burger flex items-center text-blue-600 p-3">
+                <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Mobile menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </button>
+        </div>
+        <ul
+            class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="index.html">Home</a></li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z">
+                    </path>
+                </svg>
+            </li>
+            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="about.html">About Us</a></li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z">
+                    </path>
+                </svg>
+            </li>
+            <li><a class="text-sm text-blue-600 font-bold" href="#">Article</a></li>
+
+        </ul>
+        <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
+            href="#">Sign In</a>
+        <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+            href="#">Sign up</a>
+    </nav>
+
+    <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav
+            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+                <a class="mr-auto text-3xl font-bold leading-none flex flex-row-reverse items-center justify-center"
+                    href="#">
+                    <svg class="h-12" alt="logo" viewBox="0 0 10240 10240">
+                        <img src="asset/img/selfdev2.png" width="100" alt="">
+                    </svg>
+                </a>
+                <button class="navbar-close">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div>
+                <ul>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="index.html">Home</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="#">About Us</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="article.html">Article</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-auto">
+                <div class="pt-6">
+                    <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+                        href="#">Sign in</a>
+                    <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
+                        href="#">Sign Up</a>
+                </div>
+                <p class="my-4 text-xs text-center text-gray-400">
+                    <span>Copyright © 2024</span>
+                </p>
+            </div>
+        </nav>
+    </div>
+
+<div class="container mx-auto px-6 py-16 text-center">
+    <div class="flex flex-wrap -mx-4 justify-center">
+        <div class="w-full max-w-full md:max-w-7xl mb-8 md:w-1/2 px-4 lg:w-full flex flex-col lg:flex-row lg:bg-white lg:rounded-xl lg:border lg:shadow-md">
+          <img src="https://th.bing.com/th/id/OIP.IBFodMNt8T3Si9xsqGtZHgHaFj?w=215&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Card img" class="object-cover object-center w-full h-48 lg:w-1/6 lg:rounded-xl lg:my-1" />
+            <div class="flex flex-grow">
+                <div class="triangle lg:opacity-0"></div>
+            <div class="flex flex-col justify-between px-4 py-6 bg-white border border-gray-400 text-center lg:border-transparent lg:text-left">
+              <div>
+                <a href="article1.html" class="block mb-4 text-2xl font-black leading-tight hover:underline hover:text-blue-600">
+                    Stepping Out of Your Comfort Zone: A Path to Personal Growth and Success
+                </a>
+                <p class="mb-4">
+                    Stepping beyond the confines of our comfort zone is akin to embarking on a journey of self
+                    discovery and growth. It's where we confront challenges, embrace uncertainty, and ultimately 
+                    cultivate resilience.
+                </p>
+                </div>
+                <div>
+                <a href="article1.html"
+                  class="inline-block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600">Read
+                  More -></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-wrap -mx-4 justify-center">
+        <div class="w-full max-w-full md:max-w-7xl mb-8 md:w-1/2 px-4 lg:w-full flex flex-col lg:flex-row lg:bg-white lg:rounded-xl lg:border lg:shadow-md">
+          <img src="https://th.bing.com/th/id/OIP.Dmu9RuKYravOvMbGTTNe9gHaE8?w=276&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Card img" class="object-cover object-center w-full h-48 lg:w-1/6 lg:rounded-xl lg:my-1" />
+            <div class="flex flex-grow">
+                <div class="triangle lg:opacity-0"></div>
+            <div class="flex flex-col justify-between px-4 py-6 bg-white border border-gray-400 text-center lg:border-transparent lg:text-left">
+              <div>
+                <a href="article2.html" class="block mb-4 text-2xl font-black leading-tight hover:underline hover:text-blue-600">
+                  Set Your Personal Goals
+                </a>
+                <p class="mb-4">
+                  Setting personal development goals can be a highly effective and less stressful way to foster emotional and intellectual growth.
+                </p>
+                </div>
+                <div>
+                <a href="article2.html"
+                  class="inline-block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600">Read
+                  More -></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-wrap -mx-4 justify-center">
+        <div class="w-full max-w-full md:max-w-7xl mb-8 md:w-1/2 px-4 lg:w-full flex flex-col lg:flex-row lg:bg-white lg:rounded-xl lg:border lg:shadow-md">
+          <img src="https://th.bing.com/th/id/OIP.dtn7FCTAbIiqTL3PccLBdgHaE1?w=259&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Card img" class="object-cover object-center w-full h-48 lg:w-1/6 lg:rounded-xl lg:my-1" />
+            <div class="flex flex-grow">
+                <div class="triangle lg:opacity-0"></div>
+            <div class="flex flex-col justify-between px-4 py-6 bg-white border border-gray-400 text-center lg:border-transparent lg:text-left">
+              <div>
+                <a href="article3.html" class="block mb-4 text-2xl font-black leading-tight hover:underline hover:text-blue-600">
+                  Sharpening Your Skills: Strategies to advance your skill set
+                </a>
+                <p class="mb-4">
+                  In today's ever-evolving world, possessing a sharp set of skills is crucial to achieving success and remaining relevant in your field. Whether you're just starting your career, looking to transition into a new path, or simply aiming to enhance your advancement opportunities, developing your skills is a valuable investment in yourself.
+                </p>
+                </div>
+                <div>
+                <a href="article3.html"
+                  class="inline-block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600">Read
+                  More -></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-wrap -mx-4 justify-center">
+        <div class="w-full max-w-full md:max-w-7xl mb-8 md:w-1/2 px-4 lg:w-full flex flex-col lg:flex-row lg:bg-white lg:rounded-xl lg:border lg:shadow-md">
+          <img src="https://th.bing.com/th/id/OIP.FKEffW_uoJInZaf3-hfJmAHaEj?w=297&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Card img" class="object-cover object-center w-full h-48 lg:w-1/6 lg:rounded-xl lg:my-1" />
+            <div class="flex flex-grow">
+                <div class="triangle lg:opacity-0"></div>
+            <div class="flex flex-col justify-between px-4 py-6 bg-white border border-gray-400 text-center lg:border-transparent lg:text-left">
+              <div>
+                <a href="article4.html" class="block mb-4 text-2xl font-black leading-tight hover:underline hover:text-blue-600">
+                  Personal Development
+                </a>
+                <p class="mb-4">
+                 Personal development is a lifelong process. It is a means for individuals to evaluate their abilities and attributes, reflect on their life goals, and establish objectives in order to reach and surpass their full potential.
+                </p>
+                </div>
+                <div>
+                <a href="article4.html"
+                  class="inline-block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600">Read
+                  More -></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-wrap -mx-4 justify-center">
+        <div class="w-full max-w-full md:max-w-7xl mb-8 md:w-1/2 px-4 lg:w-full flex flex-col lg:flex-row lg:bg-white lg:rounded-xl lg:border lg:shadow-md">
+          <img src="https://th.bing.com/th/id/OIP.kWJIwO8N46uendHPJeB_SwHaFI?w=277&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Card img" class="object-cover object-center w-full h-48 lg:w-1/6 lg:rounded-xl lg:my-1" />
+            <div class="flex flex-grow">
+                <div class="triangle lg:opacity-0"></div>
+            <div class="flex flex-col justify-between px-4 py-6 bg-white border border-gray-400 text-center lg:border-transparent lg:text-left">
+              <div>
+                <a href="article5.html" class="block mb-4 text-2xl font-black leading-tight hover:underline hover:text-blue-600">
+                  Self confidence
+                </a>
+                <p class="mb-4">
+                Self-confidence is a part of personality development that involves trusting in your own abilities, judgment, and capacities. It’s about feeling worthy and valuing yourself, regardless of what others think or any imperfections you may have. 
+                </p>
+                </div>
+                <div>
+                <a href="article5.html"
+                  class="inline-block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600">Read
+                  More -></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <!-- Foooter -->
+    <section class="bg-white">
+        <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+            <nav class="flex flex-wrap justify-center -mx-5 -my-2">
+                <div class="px-5 py-2">
+                    <a href="index.html" class="text-base leading-6 text-gray-500 hover:text-blue-900">
+                        Home
+                    </a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="#" class="text-base leading-6 text-gray-500 hover:text-blue-900">
+                        About us
+                    </a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="article.html" class="text-base leading-6 text-gray-500 hover:text-blue-900">
+                        Article
+                    </a>
+                </div>
+            </nav>
+            <div class="flex justify-center mt-8 space-x-6">
+
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Github</span>
+                    <img src="asset/img/selfdev2.png" width="100" alt="">
+                </a>
+            </div>
+            <p class="mt-8 text-base leading-6 text-center text-gray-400">
+                © 2024 Self.dev. All rights reserved.
+            </p>
+        </div>
+    </section>
+
+
+    <script>
+        // Burger menus
+        document.addEventListener('DOMContentLoaded', function () {
+            // open
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
