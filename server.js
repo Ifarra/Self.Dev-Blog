@@ -108,8 +108,72 @@ app.get("/blog/:id", (req, res) => {
     }
   }
   const loged = !!user;
+  const fid = req.params.id;
   let blogid = "blog/article" + req.params.id;
-  res.render(blogid, { title: "Article", loged, user });
+  res.render(blogid, { title: "Article", loged, user, fid });
+});
+
+app.post("/blog/:numtalent/comment", (req, res) => {
+  const { numtalent } = req.params;
+  const { comment } = req.body;
+  const token = req.cookies.loged;
+  let user;
+  if (token) {
+    try {
+      user = jwt.verify(token, process.env.SECRET);
+    } catch (error) {
+      user = false;
+    }
+  } else {
+    return res.redirect("/login");
+  }
+
+  // Read the existing comments from the JSON file
+  let comments = JSON.parse(fs.readFileSync("comments.json"));
+
+  // Find the comment section based on the numtalent parameter
+  const commentSection = comments.find(
+    (section) => section.numtalent === numtalent
+  );
+
+  if (!commentSection) {
+    // If the comment section doesn't exist, create a new one
+    const newCommentSection = {
+      numtalent,
+      date: Date.now(),
+      comments: [],
+    };
+
+    // Add the new comment section to the list of comments
+    comments.push(newCommentSection);
+
+    // Add the comment to the newly created comment section
+    newCommentSection.comments.push({ user, comment });
+  } else {
+    // Add the comment to the existing comment section
+    commentSection.comments.push({ user, comment });
+  }
+
+  // Save the updated comments back to the JSON file
+  fs.writeFileSync("comments.json", JSON.stringify(comments));
+
+  // Send the updated comments as the response
+  res.redirect(`/blog/${numtalent}#commentsContainer`);
+});
+
+app.get("/blog/:numtalent/comments", (req, res) => {
+  const { numtalent } = req.params;
+
+  // Read the comments from the JSON file
+  const comments = JSON.parse(fs.readFileSync("comments.json"));
+
+  // Filter the comments for the specific numtalent
+  const filteredComments = comments.filter(
+    (comment) => comment.numtalent === numtalent
+  );
+
+  // Send the filtered comments as JSON
+  res.json(filteredComments);
 });
 
 app.listen(3000, () => {

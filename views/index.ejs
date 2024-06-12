@@ -61,7 +61,7 @@
                                 single
                                 everyday, We'll help you to be better you!</p>
                             <div class="mt-10 flex flex-col items-center md:flex-row">
-                                <a href="about.html"
+                                <a href="/about"
                                     class="animate__animated animate__fadeInLeft mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-blue-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-blue-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
                                     About us</a>
                                 <a href="#blog" aria-label=""
@@ -133,7 +133,7 @@
                 <h2 class="mr-10 text-4xl font-bold leading-none md:text-5xl">
                     Self Development Blog
                 </h2>
-                <a href="#blog" id="blogl"
+                <a href="/articlelist" id="blogl"
                     class="block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600">
                     Go to Article ->
                 </a>
@@ -281,86 +281,55 @@
         </section>
 
         <!-- component -->
-        <!-- Foooter -->
-        <section class="bg-white">
-            <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-                <nav class="flex flex-wrap justify-center -mx-5 -my-2">
-                    <div class="px-5 py-2">
-                        <a href="#" class="text-base leading-6 text-gray-500 hover:text-blue-900">
-                            Home
-                        </a>
-                    </div>
-                    <div class="px-5 py-2">
-                        <a href="about.html" class="text-base leading-6 text-gray-500 hover:text-blue-900">
-                            About us
-                        </a>
-                    </div>
-                    <div class="px-5 py-2">
-                        <a href="articlelist.html" class="text-base leading-6 text-gray-500 hover:text-blue-900">
-                            Article
-                        </a>
-                    </div>
-                </nav>
-                <div class="flex justify-center mt-8 space-x-6">
+        <%- include("./partials/footer") %>
 
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
-                        <span class="sr-only">Github</span>
-                        <img src="asset/img/selfdev2.png" width="100" alt="">
-                    </a>
-                </div>
-                <p class="mt-8 text-base leading-6 text-center text-gray-400">
-                    © 2024 Self.dev. All rights reserved.
-                </p>
-            </div>
-        </section>
+            <script>
 
-        <script>
+                // Burger menus
+                document.addEventListener('DOMContentLoaded', function () {
+                    // open
+                    const burger = document.querySelectorAll('.navbar-burger');
+                    const menu = document.querySelectorAll('.navbar-menu');
 
-            // Burger menus
-            document.addEventListener('DOMContentLoaded', function () {
-                // open
-                const burger = document.querySelectorAll('.navbar-burger');
-                const menu = document.querySelectorAll('.navbar-menu');
-
-                if (burger.length && menu.length) {
-                    for (var i = 0; i < burger.length; i++) {
-                        burger[i].addEventListener('click', function () {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
+                    if (burger.length && menu.length) {
+                        for (var i = 0; i < burger.length; i++) {
+                            burger[i].addEventListener('click', function () {
+                                for (var j = 0; j < menu.length; j++) {
+                                    menu[j].classList.toggle('hidden');
+                                }
+                            });
+                        }
                     }
-                }
 
-                // close
-                const close = document.querySelectorAll('.navbar-close');
-                const backdrop = document.querySelectorAll('.navbar-backdrop');
+                    // close
+                    const close = document.querySelectorAll('.navbar-close');
+                    const backdrop = document.querySelectorAll('.navbar-backdrop');
 
-                if (close.length) {
-                    for (var i = 0; i < close.length; i++) {
-                        close[i].addEventListener('click', function () {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
+                    if (close.length) {
+                        for (var i = 0; i < close.length; i++) {
+                            close[i].addEventListener('click', function () {
+                                for (var j = 0; j < menu.length; j++) {
+                                    menu[j].classList.toggle('hidden');
+                                }
+                            });
+                        }
                     }
-                }
 
-                if (backdrop.length) {
-                    for (var i = 0; i < backdrop.length; i++) {
-                        backdrop[i].addEventListener('click', function () {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
+                    if (backdrop.length) {
+                        for (var i = 0; i < backdrop.length; i++) {
+                            backdrop[i].addEventListener('click', function () {
+                                for (var j = 0; j < menu.length; j++) {
+                                    menu[j].classList.toggle('hidden');
+                                }
+                            });
+                        }
                     }
-                }
-            });
-        </script>
+                });
+            </script>
 
 
-        <scribe-shadow id="crxjs-ext"
-            style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible; visibility: visible;"></scribe-shadow>
+            <scribe-shadow id="crxjs-ext"
+                style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible; visibility: visible;"></scribe-shadow>
 </body>
 
 </html>

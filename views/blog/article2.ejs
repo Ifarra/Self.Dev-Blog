@@ -265,134 +265,53 @@
 
       <!-- Sample Comment Below -->
 
-      <div class="flex flex-col space-y-4">
-        <!-- <div class="bg-white p-4 rounded-lg shadow-md">
-            <h3 class="text-lg font-bold">John Doe</h3>
-            <p class="text-gray-700 text-sm mb-2">Posted on April 17, 2023</p>
-            <p class="text-gray-700">This is a sample comment. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-            <h3 class="text-lg font-bold">Jane Smith</h3>
-            <p class="text-gray-700 text-sm mb-2">Posted on April 16, 2023</p>
-            <p class="text-gray-700">I agree with John. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-        </div> -->
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="text-lg font-bold">Bob Johnson</h3>
-          <p class="text-gray-700 text-sm mb-2">Posted on April 15, 2023</p>
-          <p class="text-gray-700">
-            I have a different opinion. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-          </p>
-        </div>
-        <form class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="text-lg font-bold mb-2">Add a comment</h3>
-
-          <!-- name input in comment section -->
-
-          <!-- <div class="mb-4">
-                <label class="block text-gray-700 font-bold mb-2" for="name">
-                    Name
-                </label>
-                <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="name" type="text" placeholder="Enter your name">
-            </div> -->
-          <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="comment">
-              Comment
-            </label>
-            <textarea
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="comment" rows="3" placeholder="Enter your comment"></textarea>
-          </div>
-          <button
-            class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="submit">
-            Submit
-          </button>
-        </form>
-      </div>
+      <%- include("../partials/comment") %>
     </div>
 
-    <!-- Foooter -->
-    <section class="bg-white">
-      <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-        <nav class="flex flex-wrap justify-center -mx-5 -my-2">
-          <div class="px-5 py-2">
-            <a href="index.html" class="text-base leading-6 text-gray-500 hover:text-blue-900">
-              Home
-            </a>
-          </div>
-          <div class="px-5 py-2">
-            <a href="about.html" class="text-base leading-6 text-gray-500 hover:text-blue-900">
-              About us
-            </a>
-          </div>
-          <div class="px-5 py-2">
-            <a href="#" class="text-base leading-6 text-gray-500 hover:text-blue-900">
-              Article
-            </a>
-          </div>
-        </nav>
-        <div class="flex justify-center mt-8 space-x-6">
-          <a href="#" class="text-gray-400 hover:text-gray-500">
-            <span class="sr-only">Github</span>
-            <img src="../asset/img/selfdev2.png" width="100" alt="" />
-          </a>
-        </div>
-        <p class="mt-8 text-base leading-6 text-center text-gray-400">
-          © 2024 Self.dev. All rights reserved.
-        </p>
-      </div>
-    </section>
+    <%- include("../partials/footer") %>
 
-    <script>
-      // Burger menus
-      document.addEventListener("DOMContentLoaded", function () {
-        // open
-        const burger = document.querySelectorAll(".navbar-burger");
-        const menu = document.querySelectorAll(".navbar-menu");
+      <script>
+        // Burger menus
+        document.addEventListener("DOMContentLoaded", function () {
+          // open
+          const burger = document.querySelectorAll(".navbar-burger");
+          const menu = document.querySelectorAll(".navbar-menu");
 
-        if (burger.length && menu.length) {
-          for (var i = 0; i < burger.length; i++) {
-            burger[i].addEventListener("click", function () {
-              for (var j = 0; j < menu.length; j++) {
-                menu[j].classList.toggle("hidden");
-              }
-            });
+          if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+              burger[i].addEventListener("click", function () {
+                for (var j = 0; j < menu.length; j++) {
+                  menu[j].classList.toggle("hidden");
+                }
+              });
+            }
           }
-        }
 
-        // close
-        const close = document.querySelectorAll(".navbar-close");
-        const backdrop = document.querySelectorAll(".navbar-backdrop");
+          // close
+          const close = document.querySelectorAll(".navbar-close");
+          const backdrop = document.querySelectorAll(".navbar-backdrop");
 
-        if (close.length) {
-          for (var i = 0; i < close.length; i++) {
-            close[i].addEventListener("click", function () {
-              for (var j = 0; j < menu.length; j++) {
-                menu[j].classList.toggle("hidden");
-              }
-            });
+          if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+              close[i].addEventListener("click", function () {
+                for (var j = 0; j < menu.length; j++) {
+                  menu[j].classList.toggle("hidden");
+                }
+              });
+            }
           }
-        }
 
-        if (backdrop.length) {
-          for (var i = 0; i < backdrop.length; i++) {
-            backdrop[i].addEventListener("click", function () {
-              for (var j = 0; j < menu.length; j++) {
-                menu[j].classList.toggle("hidden");
-              }
-            });
+          if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+              backdrop[i].addEventListener("click", function () {
+                for (var j = 0; j < menu.length; j++) {
+                  menu[j].classList.toggle("hidden");
+                }
+              });
+            }
           }
-        }
-      });
-    </script>
+        });
+      </script>
 </body>
 
 </html>

@@ -96,10 +96,11 @@
         <div class="mt-auto">
             <div class="pt-6">
                 <% if(loged==true) { %>
-                    <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
-                        href="#">
+                    <span
+                        class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+                        style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;">
                         <%= user.username %>
-                    </a>
+                    </span>
                     <form
                         class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
                         action="/logout" method="POST">

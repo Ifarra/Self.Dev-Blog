@@ -128,7 +128,7 @@
                         <h1 class="mt-4 text-2xl font-semibold text-center capitalize text-gray-700">Dennis Salomo
                             Angelos
                             Charisteas</h1>
-                        <p class="mt-2 capitalize text-gray-500">Main Content Writer</p>
+                        <p class="mt-2 capitalize text-gray-500">Main Content Writter</p>
 
                         <div class="-mx-2 mt-3 flex">
 
@@ -169,13 +169,11 @@
                     </div>
 
                     <div class="flex flex-col items-center rounded-xl border p-4 dark:border-gray-700 sm:p-6">
-                        <img class="aspect-square w-full rounded-xl object-cover"
-                            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                            alt="" />
+                        <img class="aspect-square w-full rounded-xl object-cover" src="asset/team/rangga.jpg" alt="" />
 
-                        <h1 class="mt-4 text-2xl font-semibold capitalize text-gray-700">John Doe</h1>
+                        <h1 class="mt-4 text-2xl font-semibold capitalize text-gray-700">Rangga Ferdiansyah</h1>
 
-                        <p class="mt-2 capitalize text-gray-500">Full stack developer</p>
+                        <p class="mt-2 capitalize text-gray-500">Main Content Writter</p>
 
                         <div class="-mx-2 mt-3 flex">
 
@@ -198,82 +196,50 @@
 
 
 
-        <!-- Foooter -->
-        <section class="bg-white">
-            <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-                <nav class="flex flex-wrap justify-center -mx-5 -my-2">
-                    <div class="px-5 py-2">
-                        <a href="index.html" class="text-base leading-6 text-gray-500 hover:text-blue-900">
-                            Home
-                        </a>
-                    </div>
-                    <div class="px-5 py-2">
-                        <a href="#" class="text-base leading-6 text-gray-500 hover:text-blue-900">
-                            About us
-                        </a>
-                    </div>
-                    <div class="px-5 py-2">
-                        <a href="articlelist.html" class="text-base leading-6 text-gray-500 hover:text-blue-900">
-                            Article
-                        </a>
-                    </div>
-                </nav>
-                <div class="flex justify-center mt-8 space-x-6">
+        <%- include("./partials/footer") %>
 
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
-                        <span class="sr-only">Github</span>
-                        <img src="asset/img/selfdev2.png" width="100" alt="">
-                    </a>
-                </div>
-                <p class="mt-8 text-base leading-6 text-center text-gray-400">
-                    © 2024 Self.dev. All rights reserved.
-                </p>
-            </div>
-        </section>
+            <script>
+                // Burger menus
+                document.addEventListener('DOMContentLoaded', function () {
+                    // open
+                    const burger = document.querySelectorAll('.navbar-burger');
+                    const menu = document.querySelectorAll('.navbar-menu');
 
-
-        <script>
-            // Burger menus
-            document.addEventListener('DOMContentLoaded', function () {
-                // open
-                const burger = document.querySelectorAll('.navbar-burger');
-                const menu = document.querySelectorAll('.navbar-menu');
-
-                if (burger.length && menu.length) {
-                    for (var i = 0; i < burger.length; i++) {
-                        burger[i].addEventListener('click', function () {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
+                    if (burger.length && menu.length) {
+                        for (var i = 0; i < burger.length; i++) {
+                            burger[i].addEventListener('click', function () {
+                                for (var j = 0; j < menu.length; j++) {
+                                    menu[j].classList.toggle('hidden');
+                                }
+                            });
+                        }
                     }
-                }
 
-                // close
-                const close = document.querySelectorAll('.navbar-close');
-                const backdrop = document.querySelectorAll('.navbar-backdrop');
+                    // close
+                    const close = document.querySelectorAll('.navbar-close');
+                    const backdrop = document.querySelectorAll('.navbar-backdrop');
 
-                if (close.length) {
-                    for (var i = 0; i < close.length; i++) {
-                        close[i].addEventListener('click', function () {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
+                    if (close.length) {
+                        for (var i = 0; i < close.length; i++) {
+                            close[i].addEventListener('click', function () {
+                                for (var j = 0; j < menu.length; j++) {
+                                    menu[j].classList.toggle('hidden');
+                                }
+                            });
+                        }
                     }
-                }
 
-                if (backdrop.length) {
-                    for (var i = 0; i < backdrop.length; i++) {
-                        backdrop[i].addEventListener('click', function () {
-                            for (var j = 0; j < menu.length; j++) {
-                                menu[j].classList.toggle('hidden');
-                            }
-                        });
+                    if (backdrop.length) {
+                        for (var i = 0; i < backdrop.length; i++) {
+                            backdrop[i].addEventListener('click', function () {
+                                for (var j = 0; j < menu.length; j++) {
+                                    menu[j].classList.toggle('hidden');
+                                }
+                            });
+                        }
                     }
-                }
-            });
-        </script>
+                });
+            </script>
 </body>
 
 </html>
