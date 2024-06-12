@@ -148,7 +148,7 @@ app.post("/blog/:numtalent/comment", (req, res) => {
 
     // Add the comment to the newly created comment section
 
-    commentSection.comments.push({ user, comment });
+    newCommentSection.comments.push({ user, comment });
   } else {
     // Add the comment to the existing comment section
     commentSection.comments.push({ user, comment });
